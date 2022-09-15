@@ -1,0 +1,21 @@
+.hero {
+  max-width: 144rem;
+  height: auto;
+  margin: 5.4rem auto 15rem;
+
+  padding: 0 16.45rem;
+
+  @media screen and (max-width: 1440px) {
+    padding: 0 11.5vw;
+  }
+
+  position: relative;
+}
+
+.greeting {
+  position: absolute;
+  width: 44.5rem;
+  height: 35.7rem;
+  background-color: var(--color-very-light-grey);
+  bottom: 0;
+}

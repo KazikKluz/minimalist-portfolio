@@ -1,0 +1,13 @@
+.layout {
+  max-width: 144rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  //padding: 6.4rem 16.45rem 0;
+  padding-top: 6.4rem;
+  display: flex;
+  flex-direction: column;
+
+  // @media screen and (max-width: 1440px) {
+  //   padding: 0 11.5vw;
+  // }
+}

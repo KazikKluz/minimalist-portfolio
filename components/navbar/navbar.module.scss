@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  width: auto;
+  padding: 0 16.45rem;
+
+  @media screen and (max-width: 1440px) {
+    padding: 0 11.5vw;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-family: 'Public Sans', sans-serif;
+    line-height: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-greyish-dark-blue);
+    margin-left: 4.25rem;
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: var(--color-greyish-dark-blue);
+    }
+
+    a:link.active,
+    a:visited.active {
+      text-decoration: none;
+      color: var(--color-cyan);
+    }
+  }
+}
+
+.logo {
+  fill: var(--color-grayish-dark-blue);
+  width: 6rem;
+  height: 3.2rem;
+  margin-right: auto;
+}

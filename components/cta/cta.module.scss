@@ -1,0 +1,33 @@
+.cta {
+  margin-top: auto;
+  display: flex;
+  width: auto;
+  padding: 0 16.45rem;
+  height: 8.4rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rem;
+
+  @media screen and (max-width: 1440px) {
+    padding: 0 11.5vw;
+  }
+}
+
+.heading {
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.2rem;
+  display: block;
+  width: 35rem;
+  height: 8.4rem;
+  color: var(--color-greyish-dark-blue);
+}
+
+.line {
+  display: block;
+  width: 53.4rem;
+  height: 1px;
+  background-color: var(--color-greyish-dark-blue);
+  opacity: 0.15;
+}
