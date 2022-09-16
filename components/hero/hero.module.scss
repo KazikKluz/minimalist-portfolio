@@ -10,6 +10,7 @@
   }
 
   position: relative;
+  display: block;
 }
 
 .greeting {
@@ -18,4 +19,21 @@
   height: 35.7rem;
   background-color: var(--color-very-light-grey);
   bottom: 0;
+
+  padding-top: 5.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1 {
+    display: block;
+    width: 39rem;
+    height: 22rem;
+    color: var(--color-greyish-dark-blue);
+    font-family: 'Ibarra Real Nova';
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -0.446px;
+  }
 }
