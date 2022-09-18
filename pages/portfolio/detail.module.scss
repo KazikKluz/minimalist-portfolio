@@ -1,0 +1,87 @@
+.detail {
+  padding: 9.4rem 16.45rem;
+
+  @media screen and (max-width: 1440px) {
+    padding: 0 11.5vw;
+  }
+
+  main {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    margin-top: 11.5rem;
+  }
+}
+
+.description {
+  max-width: 35rem;
+  height: 49.8rem;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-top: 1px solid rgba(#33323d, 0.15);
+  border-bottom: 1px solid rgba(#33323d, 0.15);
+  color: var(--color-greyish-dark-blue);
+
+  h2 {
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.2rem;
+    letter-spacing: -0.357px;
+    margin-bottom: 2.9rem;
+  }
+
+  h4 {
+    font-family: 'Public Sans', serif;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: var(--color-cyan);
+    margin-bottom: 1.6rem;
+
+    &:last-of-type {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  p {
+    font-family: 'Public Sans', serif;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    opacity: 0.8;
+    margin-bottom: 2.2rem;
+  }
+}
+
+.preview {
+  width: 63.5rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-greyish-dark-blue);
+
+  p {
+    font-family: 'Public Sans', serif;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    opacity: 0.8;
+    margin-bottom: 4rem;
+  }
+
+  h3 {
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 4.2rem;
+    letter-spacing: -0.28px;
+    margin-bottom: 2.8rem;
+  }
+
+  span {
+    margin-bottom: 15rem;
+  }
+}

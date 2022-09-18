@@ -9,7 +9,7 @@ import styles from './hero.module.scss';
 const Hero = () => {
   return (
     <div className={styles.hero}>
-      <Image layout='responsive' src={HeroImage} alt='hero banner' />
+      <Image priority layout='responsive' src={HeroImage} alt='hero banner' />
 
       <div className={styles.greeting}>
         <h1>

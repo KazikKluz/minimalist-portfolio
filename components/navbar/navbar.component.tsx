@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <svg className={styles.logo}>
-        <use xlinkHref='sprite.svg#logo'></use>
+        <use xlinkHref='/sprite.svg#logo'></use>
       </svg>
       <ul className={styles.links}>
         <li>
@@ -18,10 +18,10 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link href='#'>
+          <Link href='/portfolio'>
             <a
               className={`${
-                router.pathname == '/portfolio' ? styles.active : ''
+                router.pathname.startsWith('/portfolio') ? styles.active : ''
               }`}
             >
               Portfolio

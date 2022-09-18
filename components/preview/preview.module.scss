@@ -1,0 +1,49 @@
+.preview {
+  padding: 0 16.45rem;
+
+  @media screen and (max-width: 1440px) {
+    padding: 0 11.5vw;
+  }
+
+  display: flex;
+  color: var(--color-greyish-dark-blue);
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+}
+
+.image_container {
+  min-width: 54rem;
+  height: auto;
+  display: block;
+  //filter: contrast(123%) saturate(108%) brightness(83%);
+}
+
+.description {
+  max-width: 35rem;
+  margin: 0 12.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-top: 1px solid rgba(#33323d, 0.15);
+  border-bottom: 1px solid rgba(#33323d, 0.15);
+
+  h2 {
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.2rem;
+    letter-spacing: -0.357px;
+    margin-bottom: 2.8rem;
+  }
+
+  p {
+    font-family: 'Public Sans', serif;
+    font-size: 1.6rem;
+    line-height: 2.76rem;
+    opacity: 0.8;
+    margin-bottom: 2.4rem;
+  }
+}
