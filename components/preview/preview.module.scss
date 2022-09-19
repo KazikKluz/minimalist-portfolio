@@ -30,6 +30,11 @@
   border-top: 1px solid rgba(#33323d, 0.15);
   border-bottom: 1px solid rgba(#33323d, 0.15);
 
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
   h2 {
     font-family: 'Ibarra Real Nova', serif;
     font-weight: 700;

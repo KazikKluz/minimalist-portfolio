@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import ButtonSecondary from '../button-secondary/button-secondary.component';
 
 type Props = {
+  idx?: number;
   rightImage?: boolean;
   title: string;
   description: string;
@@ -16,6 +18,7 @@ type Props = {
 import styles from './preview.module.scss';
 
 const Preview = ({
+  idx,
   rightImage,
   title,
   description,
@@ -40,7 +43,11 @@ const Preview = ({
       <div className={styles.description}>
         <h2>{title}</h2>
         <p>{description}</p>
-        <ButtonSecondary>{buttonTitle}</ButtonSecondary>
+        <Link href={idx !== undefined ? `/portfolio/${idx + 1}` : `/portfolio`}>
+          <a>
+            <ButtonSecondary>{buttonTitle}</ButtonSecondary>
+          </a>
+        </Link>
       </div>
       {rightImage && (
         <div className={styles.image_container}>

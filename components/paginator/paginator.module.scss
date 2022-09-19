@@ -1,0 +1,50 @@
+.paginator {
+  display: flex;
+  height: 13.2rem;
+  border-top: 1px solid rgba(#33323d, 0.15);
+  border-bottom: 1px solid rgba(#33323d, 0.15);
+  margin-top: 6.4rem;
+  color: var(--color-greyish-dark-blue);
+
+  & > * {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  .right {
+    justify-content: flex-end;
+    border-left: 1px solid rgba(#33323d, 0.15);
+    text-align: end;
+  }
+
+  h4 {
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    letter-spacing: -0.285px;
+  }
+
+  p {
+    font-family: 'Public Sans', serif;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    opacity: 0.5;
+  }
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+}
+
+.text {
+  padding: 0 3.2rem;
+}
+
+.icon {
+  width: 0.9rem;
+  fill: none;
+  stroke: var(--color-greyish-dark-blue);
+}

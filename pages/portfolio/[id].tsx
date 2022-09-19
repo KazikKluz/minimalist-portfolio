@@ -1,9 +1,11 @@
-import type { PropsWithChildren, ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import { InferGetStaticPropsType } from 'next';
+import { useRouter } from 'next/router';
 import type { NextPageWithLayout } from '../_app';
 
 import Layout from '../../components/layout/layout.component';
 import ButtonSecondary from '../../components/button-secondary/button-secondary.component';
+import Paginator from '../../components/paginator/paginator.component';
 
 import Image from 'next/image';
 
@@ -15,6 +17,7 @@ import { GetStaticProps } from 'next';
 const Detail: NextPageWithLayout = ({
   pageDetails,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const router = useRouter();
   return (
     <div className={styles.detail}>
       <div className={styles.hero}>
@@ -38,14 +41,16 @@ const Detail: NextPageWithLayout = ({
           <h3>Project Background</h3>
           <p>{pageDetails.longDesc}</p>
           <h3>Static Previews</h3>
-          <Image
-            className={styles.firstImage}
-            src={pageDetails.preview1}
-            width={847}
-            height={534}
-            layout='responsive'
-            alt='preview 1'
-          />
+          <div className={styles.firstImage}>
+            <Image
+              src={pageDetails.preview1}
+              width={847}
+              height={534}
+              layout='responsive'
+              alt='preview 1'
+            />
+          </div>
+
           <Image
             src={pageDetails.preview2}
             width={847}
@@ -55,6 +60,7 @@ const Detail: NextPageWithLayout = ({
           />
         </div>
       </main>
+      <Paginator pageNo={Number(router.query.id)} />
     </div>
   );
 };
