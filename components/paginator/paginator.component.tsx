@@ -31,7 +31,7 @@ const Paginator = ({ pageNo }: Props) => {
   }
   return (
     <div className={styles.paginator}>
-      <Link href={`/portfolio/${pageNo === 1 ? '4' : (pageNo - 1).toString()}`}>
+      {/* <Link href={`/portfolio/${pageNo === 1 ? '4' : (pageNo - 1).toString()}`}>
         <a className={styles.left}>
           <svg className={styles.icon}>
             <use xlinkHref='/sprite.svg#arrow-left'></use>
@@ -41,18 +41,37 @@ const Paginator = ({ pageNo }: Props) => {
             <p>Previous Project</p>
           </div>
         </a>
-      </Link>
-      <Link href={`/portfolio/${pageNo === 4 ? '1' : (pageNo + 1).toString()}`}>
-        <a className={styles.right}>
-          <div className={styles.text}>
-            <h4>{rightPage}</h4>
-            <p>Next Project</p>
-          </div>
-          <svg className={styles.icon}>
-            <use xlinkHref='/sprite.svg#arrow-right'></use>
-          </svg>
-        </a>
-      </Link>
+      </Link> */}
+      <div className={styles.left}>
+        <Link
+          href={`/portfolio/${pageNo === 1 ? '4' : (pageNo - 1).toString()}`}
+        >
+          <a>
+            <svg className={styles.icon}>
+              <use xlinkHref='/sprite.svg#arrow-left'></use>
+            </svg>
+            <div className={styles.text}>
+              <h4>{leftPage}</h4>
+              <p>Previous Project</p>
+            </div>
+          </a>
+        </Link>
+      </div>
+      <div className={styles.right}>
+        <Link
+          href={`/portfolio/${pageNo === 4 ? '1' : (pageNo + 1).toString()}`}
+        >
+          <a className={styles.next}>
+            <div className={styles.text}>
+              <h4>{rightPage}</h4>
+              <p>Next Project</p>
+            </div>
+            <svg className={styles.icon}>
+              <use xlinkHref='/sprite.svg#arrow-right'></use>
+            </svg>
+          </a>
+        </Link>
+      </div>
     </div>
   );
 };

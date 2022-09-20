@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Navbar from '../navbar/navbar.component';
 import Footer from '../footer/footer.component';
 import Cta from '../cta/cta.component';
@@ -9,11 +10,13 @@ type Props = {
 import styles from './layout.module.scss';
 
 const Layout = ({ children }: Props) => {
+  const router = useRouter();
+  console.log(router.pathname);
   return (
     <div className={styles.layout}>
       <Navbar />
       {children}
-      <Cta />
+      {router.pathname !== '/contactme' && <Cta />}
       <Footer />
     </div>
   );
