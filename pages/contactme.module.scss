@@ -49,7 +49,7 @@
 .bottom {
   display: flex;
   padding-top: 4.7rem;
-  margin-bottom: 18.9rem;
+  margin-bottom: 10.9rem;
   color: var(--color-greyish-dark-blue);
 
   h3 {
@@ -82,6 +82,35 @@
     textarea {
       resize: none;
       height: 9.6rem;
+      margin-bottom: 2.4rem;
+    }
+
+    input,
+    textarea {
+      border: none;
+      background: #ececed;
+      outline: none;
+      border-radius: 0;
+      color: #33323d;
+      font-family: 'Public Sans', serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 3rem;
+
+      &:focus {
+        border: 1px solid var(--color-cyan);
+      }
+
+      padding: 0.9rem 1.6rem;
+
+      &::placeholder {
+        //padding: 0.9rem 1.6rem;
+        color: rgba(#33323d, 0.4);
+        font-family: 'Public Sans', serif;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 3rem;
+      }
     }
   }
 }

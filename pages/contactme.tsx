@@ -46,12 +46,17 @@ const ContactMe: NextPageWithLayout = () => {
         <h3>Contact Me</h3>
         <form>
           <label htmlFor='name'>Name</label>
-          <input type='text' id='name' placeholder='Jane Appleseed' />
+          <input type='text' id='name' placeholder='Jane Appleseed' required />
           <label htmlFor='email'>Email</label>
-          <input type='email' id='email' placeholder='email@example.com' />
+          <input
+            type='email'
+            id='email'
+            placeholder='email@example.com'
+            required
+          />
           <label htmlFor='message'>Message</label>
-          <textarea id='message' placeholder='How can I help?' />
-          <ButtonSecondary>Send Message</ButtonSecondary>
+          <textarea id='message' placeholder='How can I help?' required />
+          <ButtonSecondary dark>Send Message</ButtonSecondary>
         </form>
       </div>
     </div>

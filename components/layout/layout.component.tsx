@@ -11,7 +11,6 @@ import styles from './layout.module.scss';
 
 const Layout = ({ children }: Props) => {
   const router = useRouter();
-  console.log(router.pathname);
   return (
     <div className={styles.layout}>
       <Navbar />
