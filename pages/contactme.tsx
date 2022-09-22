@@ -1,5 +1,4 @@
-import { NextPage } from 'next';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import ButtonSecondary from '../components/button-secondary/button-secondary.component';
 
 import styles from './contactme.module.scss';
@@ -7,7 +6,39 @@ import { NextPageWithLayout } from './_app';
 
 import Layout from '../components/layout/layout.component';
 
+type InputData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 const ContactMe: NextPageWithLayout = () => {
+  const [inputData, setInputData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [isNameValid, setNameValid] = useState(true);
+
+  const { name, email, message } = inputData;
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    event.preventDefault();
+    setNameValid(true);
+    const element = event.target as HTMLInputElement;
+
+    setInputData({ ...inputData, [element.name]: element.value });
+  };
+
+  const handleClick = () => {
+    if (!name.length) {
+      setNameValid(false);
+    }
+  };
+
   return (
     <div className={styles.contactme}>
       <div className={styles.top}>
@@ -44,20 +75,39 @@ const ContactMe: NextPageWithLayout = () => {
       </div>
       <div className={styles.bottom}>
         <h3>Contact Me</h3>
-        <form>
+        <div className={styles.form}>
           <label htmlFor='name'>Name</label>
-          <input type='text' id='name' placeholder='Jane Appleseed' required />
+          <input
+            className={`${!isNameValid ? styles.danger : ''}`}
+            type='text'
+            id='name'
+            name='name'
+            placeholder='Jane Appleseed'
+            value={name}
+            onChange={handleChange}
+          />
+          <span>This field is required</span>
           <label htmlFor='email'>Email</label>
           <input
             type='email'
             id='email'
+            name='email'
             placeholder='email@example.com'
-            required
+            value={email}
+            onChange={handleChange}
           />
           <label htmlFor='message'>Message</label>
-          <textarea id='message' placeholder='How can I help?' required />
-          <ButtonSecondary dark>Send Message</ButtonSecondary>
-        </form>
+          <textarea
+            id='message'
+            placeholder='How can I help?'
+            value={message}
+            name='message'
+            onChange={handleChange}
+          />
+          <ButtonSecondary onClick={handleClick} dark>
+            Send Message
+          </ButtonSecondary>
+        </div>
       </div>
     </div>
   );
