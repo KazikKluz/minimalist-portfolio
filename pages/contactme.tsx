@@ -6,12 +6,6 @@ import { NextPageWithLayout } from './_app';
 
 import Layout from '../components/layout/layout.component';
 
-type InputData = {
-  name: string;
-  email: string;
-  message: string;
-};
-
 const ContactMe: NextPageWithLayout = () => {
   const [inputData, setInputData] = useState({
     name: '',
@@ -20,7 +14,9 @@ const ContactMe: NextPageWithLayout = () => {
   });
 
   const [isNameValid, setNameValid] = useState(true);
-
+  const [isEmailValid, setEmailValid] = useState(true);
+  const [isMessageValid, setMessageValid] = useState(true);
+  const [emailAlert, setEmailAlert] = useState('This field is required');
   const { name, email, message } = inputData;
 
   const handleChange = (
@@ -28,14 +24,40 @@ const ContactMe: NextPageWithLayout = () => {
   ) => {
     event.preventDefault();
     setNameValid(true);
+    setEmailValid(true);
+    setMessageValid(true);
+    setEmailAlert('This field is required');
     const element = event.target as HTMLInputElement;
 
     setInputData({ ...inputData, [element.name]: element.value });
   };
 
   const handleClick = () => {
+    let valid = true;
     if (!name.length) {
       setNameValid(false);
+      valid = false;
+    }
+    if (!email.includes('@') || email.length < 5) {
+      setEmailValid(false);
+      setEmailAlert('Please enter valid email address');
+      valid = false;
+    }
+
+    if (!email.length) {
+      setEmailValid(false);
+      valid = false;
+    }
+
+    if (!message.length) {
+      setMessageValid(false);
+      valid = false;
+    }
+
+    if (valid) {
+      //here should be included a code for posting the user data
+      //after that simply reset inputData values
+      setInputData({ name: '', email: '', message: '' });
     }
   };
 
@@ -75,39 +97,58 @@ const ContactMe: NextPageWithLayout = () => {
       </div>
       <div className={styles.bottom}>
         <h3>Contact Me</h3>
-        <div className={styles.form}>
-          <label htmlFor='name'>Name</label>
-          <input
-            className={`${!isNameValid ? styles.danger : ''}`}
-            type='text'
-            id='name'
-            name='name'
-            placeholder='Jane Appleseed'
-            value={name}
-            onChange={handleChange}
-          />
-          <span>This field is required</span>
-          <label htmlFor='email'>Email</label>
-          <input
-            type='email'
-            id='email'
-            name='email'
-            placeholder='email@example.com'
-            value={email}
-            onChange={handleChange}
-          />
-          <label htmlFor='message'>Message</label>
-          <textarea
-            id='message'
-            placeholder='How can I help?'
-            value={message}
-            name='message'
-            onChange={handleChange}
-          />
+        <form className={styles.form}>
+          <div
+            className={`${styles.form_group} ${
+              !isNameValid ? styles.danger : ''
+            }`}
+          >
+            <label htmlFor='name'>Name</label>
+            <input
+              type='text'
+              id='name'
+              name='name'
+              placeholder='Jane Appleseed'
+              value={name}
+              onChange={handleChange}
+            />
+            <span>This field is required</span>
+          </div>
+          <div
+            className={`${styles.form_group} ${
+              !isEmailValid ? styles.danger : ''
+            }`}
+          >
+            <label htmlFor='email'>Email</label>
+            <input
+              type='email'
+              id='email'
+              name='email'
+              placeholder='email@example.com'
+              value={email}
+              onChange={handleChange}
+            />
+            <span>{emailAlert}</span>
+          </div>
+          <div
+            className={`${styles.form_group} ${
+              !isMessageValid ? styles.danger : ''
+            }`}
+          >
+            <label htmlFor='message'>Message</label>
+            <textarea
+              id='message'
+              placeholder='How can I help?'
+              value={message}
+              name='message'
+              onChange={handleChange}
+            />
+            <span>This field is required</span>
+          </div>
           <ButtonSecondary onClick={handleClick} dark>
             Send Message
           </ButtonSecondary>
-        </div>
+        </form>
       </div>
     </div>
   );

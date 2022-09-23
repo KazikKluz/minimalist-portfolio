@@ -16,6 +16,12 @@
   }
 }
 
+.btn.disabled,
+.btn.disabled:hover {
+  cursor: default;
+  opacity: 0.2;
+}
+
 .logo_container {
   width: 4.8rem;
   height: 100%;

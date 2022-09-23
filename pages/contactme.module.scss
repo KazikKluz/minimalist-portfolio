@@ -66,13 +66,34 @@
     flex-direction: column;
     flex: 0 1 63.5rem;
 
+    .form_group {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      position: relative;
+    }
+
+    .form_group.danger {
+      span {
+        display: inline-block;
+      }
+
+      input,
+      textarea {
+        border: 1px solid var(--color-bright-red);
+      }
+
+      textarea + span {
+        top: 13rem;
+      }
+    }
+
     label {
       font-family: 'Public Sans', serif;
       font-weight: 700;
       font-size: 1.3rem;
       line-height: 3rem;
       opacity: 0.8;
-      margin-bottom: 0.8rem;
     }
 
     input {
@@ -84,6 +105,19 @@
       resize: none;
       height: 9.6rem;
       margin-bottom: 2.4rem;
+    }
+
+    span {
+      font-family: 'Public Sans', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      color: var(--color-bright-red);
+      margin-bottom: 0.8rem;
+      position: absolute;
+      top: 8.2rem;
+      display: none;
     }
 
     input,
@@ -102,14 +136,9 @@
         border: 1px solid var(--color-cyan);
       }
 
-      &.danger {
-        border: 1px solid red;
-      }
-
       padding: 0.9rem 1.6rem;
 
       &::placeholder {
-        //padding: 0.9rem 1.6rem;
         color: rgba(#33323d, 0.4);
         font-family: 'Public Sans', serif;
         font-weight: 400;

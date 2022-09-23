@@ -15,7 +15,7 @@ const Hero = () => {
         <h1>
           Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
         </h1>
-        <ButtonPrimary>About Me</ButtonPrimary>
+        <ButtonPrimary disabled>About Me</ButtonPrimary>
       </div>
     </div>
   );

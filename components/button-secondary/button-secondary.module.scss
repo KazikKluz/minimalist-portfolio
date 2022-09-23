@@ -12,6 +12,7 @@
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
+  background-color: var(--color-very-light-grey);
 
   width: fit-content;
 
@@ -31,4 +32,12 @@
   cursor: pointer;
   color: var(--color-very-light-grey);
   background-color: var(--color-greyish-dark-blue);
+}
+
+.btn.disabled,
+.btn.disabled :hover {
+  background-color: var(--color-very-light-grey);
+  color: var(--color-greyish-dark-blue);
+  opacity: 0.2;
+  cursor: default;
 }
