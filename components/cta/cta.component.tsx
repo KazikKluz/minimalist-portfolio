@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import ButtonSecondary from '../button-secondary/button-secondary.component';
 
@@ -11,7 +12,9 @@ const Cta = () => {
         Interested in doing a project together?
       </h2>
       <div className={styles.line}></div>
-      <ButtonSecondary>Contact Me</ButtonSecondary>
+      <Link href='/contactme' passHref>
+        <ButtonSecondary>Contact Me</ButtonSecondary>
+      </Link>
     </div>
   );
 };

@@ -2,6 +2,7 @@
   display: flex;
   width: auto;
   padding: 0 16.45rem;
+  justify-content: space-between;
 
   @media screen and (max-width: 1440px) {
     padding: 0 11.5vw;
@@ -41,5 +42,4 @@
   fill: var(--color-grayish-dark-blue);
   width: 6rem;
   height: 3.2rem;
-  margin-right: auto;
 }

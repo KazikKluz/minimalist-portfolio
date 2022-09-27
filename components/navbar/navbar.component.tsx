@@ -6,9 +6,14 @@ const Navbar = () => {
   const router = useRouter();
   return (
     <div className={styles.navbar}>
-      <svg className={styles.logo}>
-        <use xlinkHref='/sprite.svg#logo'></use>
-      </svg>
+      <Link href='/'>
+        <a>
+          <svg className={styles.logo}>
+            <use xlinkHref='/sprite.svg#logo'></use>
+          </svg>
+        </a>
+      </Link>
+
       <ul className={styles.links}>
         <li>
           <Link href='/'>

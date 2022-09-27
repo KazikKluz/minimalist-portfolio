@@ -6,9 +6,14 @@ import styles from './footer.module.scss';
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <svg className={styles.logo}>
-        <use xlinkHref='sprite.svg#logo'></use>
-      </svg>
+      <Link href='/'>
+        <a className={styles.logo_link}>
+          <svg className={styles.logo}>
+            <use xlinkHref='sprite.svg#logo'></use>
+          </svg>
+        </a>
+      </Link>
+
       <ul className={styles.links}>
         <li>
           <Link href='/'>
@@ -21,7 +26,7 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link href='#'>
+          <Link href='/contactme'>
             <a>Contact Me</a>
           </Link>
         </li>

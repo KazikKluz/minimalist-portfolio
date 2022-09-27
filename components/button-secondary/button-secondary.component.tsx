@@ -5,21 +5,28 @@ type Props = {
   dark?: boolean;
   onClick?: () => void;
   disabled?: boolean;
+  href?: string;
 };
 
 import styles from './button-secondary.module.scss';
 
-const ButtonSecondary = ({ children, dark, onClick, disabled }: Props) => {
+const ButtonSecondary = ({
+  children,
+  dark,
+  onClick,
+  disabled,
+  href,
+}: Props) => {
   return (
-    <button
-      type='button'
+    <a
+      href={href}
       className={`${styles.btn} ${dark ? styles.dark : ''} ${
         disabled ? styles.disabled : ''
       }`}
       onClick={disabled ? undefined : onClick}
     >
       {children}
-    </button>
+    </a>
   );
 };
 

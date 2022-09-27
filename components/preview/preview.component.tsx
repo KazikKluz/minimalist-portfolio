@@ -13,6 +13,7 @@ type Props = {
   imageUrl: string;
   w: number;
   h: number;
+  id?: string;
 };
 
 import styles from './preview.module.scss';
@@ -26,9 +27,10 @@ const Preview = ({
   imageUrl,
   w,
   h,
+  id,
 }: Props) => {
   return (
-    <div className={styles.preview}>
+    <div id={id} className={styles.preview}>
       {!rightImage && (
         <div className={styles.image_container}>
           <Image

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import HeroImage from '../../public/image-homepage-hero@2x.jpg';
 
@@ -15,7 +16,9 @@ const Hero = () => {
         <h1>
           Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
         </h1>
-        <ButtonPrimary disabled>About Me</ButtonPrimary>
+        <Link href='#aboutme' passHref>
+          <ButtonPrimary>About Me</ButtonPrimary>
+        </Link>
       </div>
     </div>
   );
