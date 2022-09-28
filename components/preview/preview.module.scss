@@ -11,12 +11,25 @@
   &:not(:last-child) {
     margin-bottom: 8rem;
   }
+
+  @media screen and (max-width: 800px) {
+    padding: 0 4rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .image_container {
-  min-width: 54rem;
+  width: 54rem;
   height: auto;
   display: block;
+
+  @media screen and (max-width: 800px) {
+    width: 33.9rem;
+  }
   //filter: contrast(123%) saturate(108%) brightness(83%);
 }
 

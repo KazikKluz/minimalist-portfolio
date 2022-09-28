@@ -8,6 +8,10 @@
     padding: 0 11.5vw;
   }
 
+  @media screen and (max-width: 800px) {
+    padding: 0 4rem;
+  }
+
   ul {
     display: flex;
     justify-content: center;

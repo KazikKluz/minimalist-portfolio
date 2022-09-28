@@ -33,13 +33,18 @@ const Preview = ({
     <div id={id} className={styles.preview}>
       {!rightImage && (
         <div className={styles.image_container}>
-          <Image
+          {/* <Image
             src={imageUrl}
             alt='preview image'
             layout='responsive'
             width={w}
             height={h}
-          />
+          /> */}
+          <picture className={styles.image}>
+            <source media='(max-width: 799px)' srcSet={`/tablet${imageUrl}`} />
+            <source media='(min-width: 800px)' srcSet={`${imageUrl}`} />
+            <img src={`${imageUrl}`} alt='hero image' />
+          </picture>
         </div>
       )}
       <div className={styles.description}>
@@ -53,13 +58,18 @@ const Preview = ({
       </div>
       {rightImage && (
         <div className={styles.image_container}>
-          <Image
+          {/* <Image
             src={imageUrl}
             alt='preview image'
             layout='responsive'
             width={w}
             height={h}
-          />
+          /> */}
+          <picture className={styles.image}>
+            <source media='(max-width: 799px)' srcSet={`/tablet${imageUrl}`} />
+            <source media='(min-width: 800px)' srcSet={`${imageUrl}`} />
+            <img src={`${imageUrl}`} alt='hero image' />
+          </picture>
         </div>
       )}
     </div>

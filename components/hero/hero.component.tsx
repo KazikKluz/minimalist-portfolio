@@ -10,7 +10,25 @@ import styles from './hero.module.scss';
 const Hero = () => {
   return (
     <div className={styles.hero}>
-      <Image priority layout='responsive' src={HeroImage} alt='hero banner' />
+      {/* <Image
+        priority
+        layout='fill'
+        objectFit='contain'
+        src={HeroImage}
+        alt='hero banner'
+      /> */}
+
+      <picture className={styles.image}>
+        <source
+          media='(max-width: 799px)'
+          srcSet='/tablet/image-homepage-hero@2x.jpg'
+        />
+        <source
+          media='(min-width: 800px)'
+          srcSet='/image-homepage-hero@2x.jpg'
+        />
+        <img src='/image-homepage-hero@2x.jpg' alt='hero image' />
+      </picture>
 
       <div className={styles.greeting}>
         <h1>
