@@ -14,6 +14,7 @@ type Props = {
   w: number;
   h: number;
   id?: string;
+  isOnHomepage: boolean;
 };
 
 import styles from './preview.module.scss';
@@ -28,9 +29,13 @@ const Preview = ({
   w,
   h,
   id,
+  isOnHomepage,
 }: Props) => {
   return (
-    <div id={id} className={styles.preview}>
+    <div
+      id={id}
+      className={`${styles.preview} ${isOnHomepage ? styles.homepage : ''}`}
+    >
       {!rightImage && (
         <div className={styles.image_container}>
           {/* <Image

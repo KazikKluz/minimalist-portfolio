@@ -18,6 +18,7 @@ const Home: NextPageWithLayout = () => {
         w={540}
         h={600}
         id='aboutme'
+        isOnHomepage={true}
       />
     </div>
   );
