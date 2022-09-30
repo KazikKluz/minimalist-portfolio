@@ -7,9 +7,15 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15rem;
+  gap: 3.2rem;
 
   @media screen and (max-width: 1440px) {
     padding: 0 11.5vw;
+  }
+
+  @media screen and (max-width: 868px) {
+    padding: 0 4rem;
+    margin: 9.6rem 0;
   }
 }
 
@@ -22,12 +28,18 @@
   width: 35rem;
   height: 8.4rem;
   color: var(--color-greyish-dark-blue);
+  flex-shrink: 0;
 }
 
 .line {
   display: block;
-  width: 53.4rem;
+  flex: 0 1 53rem;
+  //max-width: 53.4rem;
   height: 1px;
   background-color: var(--color-greyish-dark-blue);
   opacity: 0.15;
+
+  @media screen and (max-width: 868px) {
+    width: auto;
+  }
 }

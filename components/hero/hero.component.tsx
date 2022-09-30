@@ -20,11 +20,11 @@ const Hero = () => {
 
       <picture className={styles.image}>
         <source
-          media='(max-width: 799px)'
+          media='(max-width: 867px)'
           srcSet='/tablet/image-homepage-hero@2x.jpg'
         />
         <source
-          media='(min-width: 800px)'
+          media='(min-width: 868px)'
           srcSet='/image-homepage-hero@2x.jpg'
         />
         <img src='/image-homepage-hero@2x.jpg' alt='hero image' />
