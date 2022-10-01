@@ -6,6 +6,10 @@
   margin-top: 6.4rem;
   color: var(--color-greyish-dark-blue);
 
+  @media screen and (max-width: 868px) {
+    margin-top: 8rem;
+  }
+
   & > * {
     width: 50%;
   }
