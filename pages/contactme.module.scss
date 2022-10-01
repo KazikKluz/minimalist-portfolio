@@ -4,6 +4,10 @@
   @media screen and (max-width: 1440px) {
     padding: 0 11.5vw;
   }
+
+  @media screen and (max-width: 868px) {
+    padding: 0 4rem;
+  }
 }
 
 .top {
@@ -12,8 +16,13 @@
   border-top: 1px solid rgba(#33323d, 0.15);
   border-bottom: 1px solid rgba(#33323d, 0.15);
   color: var(--color-greyish-dark-blue);
-
   padding: 4.8rem 0;
+
+  @media screen and (max-width: 868px) {
+    padding: 3.2rem 0;
+    flex-direction: column;
+  }
+
   h3 {
     display: flex;
     width: 100%;
@@ -23,6 +32,10 @@
     font-size: 4rem;
     line-height: 4.2rem;
     letter-spacing: -0.357143px;
+
+    @media screen and (max-width: 868px) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   p {
@@ -36,6 +49,10 @@
 
 .text {
   max-width: 63.5rem;
+
+  @media screen and (max-width: 868px) {
+    max-width: 68.9rem;
+  }
 
   .icon {
     fill: var(--color-greyish-dark-blue);
@@ -52,6 +69,12 @@
   margin-bottom: 10.9rem;
   color: var(--color-greyish-dark-blue);
 
+  @media screen and (max-width: 868px) {
+    flex-direction: column;
+    padding-top: 3.2rem;
+    margin-bottom: 9.6rem;
+  }
+
   h3 {
     flex-grow: 1;
     font-family: 'Ibarra Real Nova', serif;
@@ -59,12 +82,20 @@
     font-size: 4rem;
     line-height: 4.2rem;
     letter-spacing: -0.357143px;
+
+    @media screen and (max-width: 868px) {
+      margin-bottom: 3.2rem;
+    }
   }
 
   .form {
     display: flex;
     flex-direction: column;
     flex: 0 1 63.5rem;
+
+    @media screen and (max-width: 868px) {
+      flex: 0 1 42.6rem;
+    }
 
     .form_group {
       display: flex;
@@ -94,6 +125,7 @@
       font-size: 1.3rem;
       line-height: 3rem;
       opacity: 0.8;
+      margin-bottom: 0.8rem;
     }
 
     input {

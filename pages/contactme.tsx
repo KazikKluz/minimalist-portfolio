@@ -119,7 +119,7 @@ const ContactMe: NextPageWithLayout = () => {
               !isEmailValid ? styles.danger : ''
             }`}
           >
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email'>Email Address</label>
             <input
               type='email'
               id='email'

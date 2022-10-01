@@ -34,7 +34,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link href='#'>
+          <Link href='/contactme'>
             <a
               className={`${
                 router.pathname == '/contactme' ? styles.active : ''
