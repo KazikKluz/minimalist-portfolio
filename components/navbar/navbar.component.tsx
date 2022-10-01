@@ -45,6 +45,11 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      <div className={styles.hamburger}>
+        <svg className={styles.hamburger_icon}>
+          <use xlinkHref='/sprite.svg#hamburger'></use>
+        </svg>
+      </div>
     </div>
   );
 };

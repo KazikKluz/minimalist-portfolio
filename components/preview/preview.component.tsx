@@ -46,6 +46,7 @@ const Preview = ({
             height={h}
           /> */}
           <picture className={styles.image}>
+            <source media='(max-width: 475px)' srcSet={`/mobile${imageUrl}`} />
             <source media='(max-width: 867px)' srcSet={`/tablet${imageUrl}`} />
             <source media='(min-width: 868px)' srcSet={`${imageUrl}`} />
             <img src={`${imageUrl}`} alt='hero image' />
@@ -71,6 +72,7 @@ const Preview = ({
             height={h}
           /> */}
           <picture className={styles.image}>
+            <source media='(max-width: 475px)' srcSet={`/mobile${imageUrl}`} />
             <source media='(max-width: 867px)' srcSet={`/tablet${imageUrl}`} />
             <source media='(min-width: 868px)' srcSet={`${imageUrl}`} />
             <img src={`${imageUrl}`} alt='hero image' />

@@ -10,4 +10,9 @@
   @media screen and (max-width: 868px) {
     max-width: 76.8rem;
   }
+
+  @media screen and (max-width: 475px) {
+    max-width: 37.5rem;
+    padding-top: 3.2rem;
+  }
 }

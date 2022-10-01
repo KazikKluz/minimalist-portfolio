@@ -12,10 +12,33 @@
     padding: 0 4rem;
   }
 
+  @media screen and (max-width: 475px) {
+    padding: 0 3.2rem;
+  }
+
+  .hamburger {
+    display: none;
+
+    @media screen and (max-width: 475px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .hamburger_icon {
+    width: 2.4rem;
+    height: 1.3rem;
+  }
+
   ul {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 475px) {
+      display: none;
+    }
   }
 
   li {
