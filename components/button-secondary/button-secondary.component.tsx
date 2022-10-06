@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 type Props = {
   children: string;
@@ -18,17 +18,15 @@ const ButtonSecondary = ({
   href,
 }: Props) => {
   return (
-    <>
-      <a
-        href={href}
-        className={`${styles.btn} ${dark ? styles.dark : ''} ${
-          disabled ? styles.disabled : ''
-        }`}
-        onClick={disabled ? undefined : onClick}
-      >
-        {children}
-      </a>
-    </>
+    <a
+      href={href}
+      className={`${styles.btn} ${dark ? styles.dark : ''} ${
+        disabled ? styles.disabled : ''
+      }`}
+      onClick={disabled ? undefined : onClick}
+    >
+      {children}
+    </a>
   );
 };
 

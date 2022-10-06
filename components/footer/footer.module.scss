@@ -12,11 +12,29 @@
     padding: 0 4rem;
   }
 
+  @media screen and (max-width: 475px) {
+    flex-direction: column;
+    height: 35.4rem;
+    padding: 5.6rem 0;
+    justify-content: space-between;
+
+    .social {
+      transform: translateX(-0.725rem);
+    }
+  }
+
   ul {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: auto;
+
+    @media screen and (max-width: 475px) {
+      flex-direction: column;
+      height: 10.6rem;
+      justify-content: space-between;
+      margin-left: auto;
+    }
   }
 
   li {
@@ -28,6 +46,10 @@
     text-transform: uppercase;
     color: #fff;
     margin-left: 4.25rem;
+
+    @media screen and (max-width: 475px) {
+      margin-left: 0;
+    }
 
     a:link,
     a:visited {
