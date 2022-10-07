@@ -9,6 +9,10 @@
     padding: 9.4rem 4rem 0;
   }
 
+  @media screen and (max-width: 475px) {
+    padding: 4rem 3.2rem 0;
+  }
+
   main {
     width: 100%;
     height: auto;
@@ -19,6 +23,17 @@
     @media screen and (max-width: 868px) {
       flex-direction: column;
     }
+
+    @media screen and (max-width: 475px) {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.image {
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -54,6 +69,17 @@
     }
   }
 
+  @media screen and (max-width: 475px) {
+    height: 45.2rem;
+    padding: 2.5rem 0;
+    margin-bottom: 4.8rem;
+
+    p {
+      position: static;
+      width: 31.1rem;
+    }
+  }
+
   h2 {
     font-family: 'Ibarra Real Nova', serif;
     font-weight: 700;
@@ -64,6 +90,10 @@
 
     @media screen and (max-width: 868px) {
       margin-bottom: 1.6rem;
+    }
+
+    @media screen and (max-width: 475px) {
+      margin-bottom: 2.4rem;
     }
   }
 
@@ -94,6 +124,10 @@
     line-height: 3rem;
     opacity: 0.8;
     margin-bottom: 2.2rem;
+
+    @media screen and (max-width: 475px) {
+      margin-bottom: auto;
+    }
   }
 }
 
@@ -123,6 +157,10 @@
     line-height: 4.2rem;
     letter-spacing: -0.28px;
     margin-bottom: 2.8rem;
+
+    @media screen and (max-width: 475px) {
+      margin-bottom: 4rem;
+    }
   }
 
   .firstImage {

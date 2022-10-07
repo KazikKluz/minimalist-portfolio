@@ -7,8 +7,6 @@ import Layout from '../../components/layout/layout.component';
 import ButtonSecondary from '../../components/button-secondary/button-secondary.component';
 import Paginator from '../../components/paginator/paginator.component';
 
-import Image from 'next/image';
-
 import { pages } from './pagesData';
 
 import styles from './detail.module.scss';
@@ -21,13 +19,18 @@ const Detail: NextPageWithLayout = ({
   return (
     <div className={styles.detail}>
       <div className={styles.hero}>
-        <Image
-          src={pageDetails.hero}
-          alt='hero'
-          layout='responsive'
-          width={1482}
-          height={667}
-        />
+        <picture className={styles.image}>
+          <source
+            media='(max-width: 475px)'
+            srcSet={`/mobile${pageDetails.hero}`}
+          />
+          <source
+            media='(max-width: 867px)'
+            srcSet={`/tablet${pageDetails.hero}`}
+          />
+          <source media='(min-width: 868px)' srcSet={`${pageDetails.hero}`} />
+          <img src={`${pageDetails.hero}`} alt='hero image' />
+        </picture>
       </div>
       <main>
         <div className={styles.description}>
@@ -42,22 +45,37 @@ const Detail: NextPageWithLayout = ({
           <p>{pageDetails.longDesc}</p>
           <h3>Static Previews</h3>
           <div className={styles.firstImage}>
-            <Image
-              src={pageDetails.preview1}
-              width={847}
-              height={534}
-              layout='responsive'
-              alt='preview 1'
-            />
+            <picture className={styles.image}>
+              <source
+                media='(max-width: 475px)'
+                srcSet={`/mobile${pageDetails.preview1}`}
+              />
+              <source
+                media='(max-width: 867px)'
+                srcSet={`/tablet${pageDetails.preview1}`}
+              />
+              <source
+                media='(min-width: 868px)'
+                srcSet={`${pageDetails.preview1}`}
+              />
+              <img src={`${pageDetails.preview1}`} alt='hero image' />
+            </picture>
           </div>
-
-          <Image
-            src={pageDetails.preview2}
-            width={847}
-            height={534}
-            layout='responsive'
-            alt='preview 2'
-          />
+          <picture className={styles.image}>
+            <source
+              media='(max-width: 475px)'
+              srcSet={`/mobile${pageDetails.preview2}`}
+            />
+            <source
+              media='(max-width: 867px)'
+              srcSet={`/tablet${pageDetails.preview2}`}
+            />
+            <source
+              media='(min-width: 868px)'
+              srcSet={`${pageDetails.preview2}`}
+            />
+            <img src={`${pageDetails.preview2}`} alt='hero image' />
+          </picture>
         </div>
       </main>
       <Paginator pageNo={Number(router.query.id)} />

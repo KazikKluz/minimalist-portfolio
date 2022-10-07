@@ -10,6 +10,11 @@
     margin-top: 8rem;
   }
 
+  @media screen and (max-width: 475px) {
+    margin-top: 6.5rem;
+    height: 14.8rem;
+  }
+
   & > * {
     width: 50%;
   }
@@ -42,6 +47,17 @@
     align-items: center;
     height: 100%;
 
+    @media screen and (max-width: 475px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 2.4rem;
+
+      &.next {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+      }
+    }
+
     &.next {
       justify-content: flex-end;
     }
@@ -50,10 +66,14 @@
 
 .text {
   padding: 0 3.2rem;
+
+  @media screen and (max-width: 475px) {
+    padding: 0;
+  }
 }
 
 .icon {
-  width: 0.9rem;
+  width: 1rem;
   fill: none;
   stroke: var(--color-greyish-dark-blue);
 }
