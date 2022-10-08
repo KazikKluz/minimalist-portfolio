@@ -64,7 +64,7 @@ const ContactMe: NextPageWithLayout = () => {
   return (
     <div className={styles.contactme}>
       <div className={styles.top}>
-        <h3>Get In Touch</h3>
+        <h3>Get in Touch</h3>
         <div className={styles.text}>
           <p>
             I’d love to hear about what you’re working on and how I could help.

@@ -3,6 +3,7 @@
   width: auto;
   padding: 0 16.45rem;
   justify-content: space-between;
+  position: relative;
 
   @media screen and (max-width: 1440px) {
     padding: 0 11.5vw;
@@ -23,12 +24,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
     }
   }
 
   .hamburger_icon {
     width: 2.4rem;
-    height: 1.3rem;
+    height: 1.8rem;
   }
 
   ul {
@@ -63,10 +65,27 @@
       color: var(--color-cyan);
     }
   }
+
+  .subnav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 22.3rem;
+    height: 18.6rem;
+    top: 5.6rem;
+    right: 3.2rem;
+    background-color: var(--color-greyish-dark-blue);
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
 
 .logo {
-  fill: var(--color-grayish-dark-blue);
+  fill: var(--color-greyish-dark-blue);
   width: 6rem;
   height: 3.2rem;
 }
