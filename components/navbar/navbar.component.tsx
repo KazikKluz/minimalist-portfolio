@@ -10,6 +10,8 @@ const Navbar = () => {
 
   const handleClick = () => setVisible(!visible);
 
+  const handleChangeSite = () => setVisible(false);
+
   return (
     <div className={styles.navbar}>
       <Link href='/'>
@@ -20,7 +22,7 @@ const Navbar = () => {
         </a>
       </Link>
 
-      <ul className={styles.links}>
+      <ul>
         <li>
           <Link href='/'>
             <a className={`${router.pathname == '/' ? styles.active : ''}`}>
@@ -58,21 +60,21 @@ const Navbar = () => {
           ></use>
         </svg>
       </div>
-      <div className={styles.subnav}>
+      <div className={`${styles.subnav} ${!visible && styles.hide}`}>
         <ul className={styles.links}>
-          <li>
+          <li className={styles.items}>
             <Link href='/'>
-              <a>Home</a>
+              <a onClick={handleChangeSite}>Home</a>
             </Link>
           </li>
           <li>
             <Link href='/portfolio'>
-              <a>Portfolio</a>
+              <a onClick={handleChangeSite}>Portfolio</a>
             </Link>
           </li>
           <li>
             <Link href='/contactme'>
-              <a>Contact Me</a>
+              <a onClick={handleChangeSite}>Contact Me</a>
             </Link>
           </li>
         </ul>

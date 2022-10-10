@@ -12,12 +12,14 @@ import styles from './layout.module.scss';
 const Layout = ({ children }: Props) => {
   const router = useRouter();
   return (
-    <div className={styles.layout}>
-      <Navbar />
-      {children}
-      {router.pathname !== '/contactme' && <Cta />}
+    <>
+      <div className={styles.layout}>
+        <Navbar />
+        {children}
+        {router.pathname !== '/contactme' && <Cta />}
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
