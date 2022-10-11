@@ -38,13 +38,6 @@ const Preview = ({
     >
       {!rightImage && (
         <div className={styles.image_container}>
-          {/* <Image
-            src={imageUrl}
-            alt='preview image'
-            layout='responsive'
-            width={w}
-            height={h}
-          /> */}
           <picture className={styles.image}>
             <source media='(max-width: 475px)' srcSet={`/mobile${imageUrl}`} />
             <source media='(max-width: 867px)' srcSet={`/tablet${imageUrl}`} />
@@ -57,20 +50,11 @@ const Preview = ({
         <h2>{title}</h2>
         <p>{description}</p>
         <Link href={idx !== undefined ? `/portfolio/${idx + 1}` : `/portfolio`}>
-          <a>
-            <ButtonSecondary>{buttonTitle}</ButtonSecondary>
-          </a>
+          <ButtonSecondary>{buttonTitle}</ButtonSecondary>
         </Link>
       </div>
       {rightImage && (
         <div className={styles.image_container}>
-          {/* <Image
-            src={imageUrl}
-            alt='preview image'
-            layout='responsive'
-            width={w}
-            height={h}
-          /> */}
           <picture className={styles.image}>
             <source media='(max-width: 475px)' srcSet={`/mobile${imageUrl}`} />
             <source media='(max-width: 867px)' srcSet={`/tablet${imageUrl}`} />

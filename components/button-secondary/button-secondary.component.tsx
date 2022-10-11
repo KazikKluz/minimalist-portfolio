@@ -10,24 +10,23 @@ type Props = {
 
 import styles from './button-secondary.module.scss';
 
-const ButtonSecondary = ({
-  children,
-  dark,
-  onClick,
-  disabled,
-  href,
-}: Props) => {
-  return (
-    <a
-      href={href}
-      className={`${styles.btn} ${dark ? styles.dark : ''} ${
-        disabled ? styles.disabled : ''
-      }`}
-      onClick={disabled ? undefined : onClick}
-    >
-      {children}
-    </a>
-  );
-};
+const ButtonSecondary = React.forwardRef<HTMLAnchorElement, Props>(
+  ({ children, dark, onClick, disabled, href }: Props, ref) => {
+    return (
+      <a
+        href={href}
+        className={`${styles.btn} ${dark ? styles.dark : ''} ${
+          disabled ? styles.disabled : ''
+        }`}
+        onClick={disabled ? undefined : onClick}
+        ref={ref}
+      >
+        {children}
+      </a>
+    );
+  }
+);
+
+ButtonSecondary.displayName = 'ButtonSecondary';
 
 export default ButtonSecondary;

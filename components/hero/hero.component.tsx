@@ -10,14 +10,6 @@ import styles from './hero.module.scss';
 const Hero = () => {
   return (
     <div className={styles.hero}>
-      {/* <Image
-        priority
-        layout='fill'
-        objectFit='contain'
-        src={HeroImage}
-        alt='hero banner'
-      /> */}
-
       <picture className={styles.image}>
         <source
           media='(max-width: 867px)'
