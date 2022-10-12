@@ -22,14 +22,17 @@ const Detail: NextPageWithLayout = ({
         <picture className={styles.image}>
           <source
             media='(max-width: 475px)'
-            srcSet={`/mobile${pageDetails.hero}`}
+            srcSet={`/mobile${pageDetails.hero}.jpg 1x, /mobile${pageDetails.hero}@2x.jpg 2x`}
           />
           <source
             media='(max-width: 867px)'
-            srcSet={`/tablet${pageDetails.hero}`}
+            srcSet={`/tablet${pageDetails.hero}.jpg 1x, /tablet${pageDetails.hero}@2x.jpg 2x`}
           />
-          <source media='(min-width: 868px)' srcSet={`${pageDetails.hero}`} />
-          <img src={`${pageDetails.hero}`} alt='hero image' />
+          <source
+            media='(min-width: 868px)'
+            srcSet={`${pageDetails.hero}.jpg 1x, ${pageDetails.hero}@2x.jpg 2x`}
+          />
+          <img src={`${pageDetails.hero}.jpg`} alt='hero image' />
         </picture>
       </div>
       <main>
@@ -48,33 +51,33 @@ const Detail: NextPageWithLayout = ({
             <picture className={styles.image}>
               <source
                 media='(max-width: 475px)'
-                srcSet={`/mobile${pageDetails.preview1}`}
+                srcSet={`/mobile${pageDetails.preview1}.jpg 1x, /mobile${pageDetails.preview1}@2x.jpg 2x`}
               />
               <source
                 media='(max-width: 867px)'
-                srcSet={`/tablet${pageDetails.preview1}`}
+                srcSet={`/tablet${pageDetails.preview1}.jpg 1x, /tablet${pageDetails.preview1}@2x.jpg 2x`}
               />
               <source
                 media='(min-width: 868px)'
-                srcSet={`${pageDetails.preview1}`}
+                srcSet={`${pageDetails.preview1}.jpg 1x, ${pageDetails.preview1}@2x.jpg 2x`}
               />
-              <img src={`${pageDetails.preview1}`} alt='hero image' />
+              <img src={`${pageDetails.preview1}.jpg`} alt='hero image' />
             </picture>
           </div>
           <picture className={styles.image}>
             <source
               media='(max-width: 475px)'
-              srcSet={`/mobile${pageDetails.preview2}`}
+              srcSet={`/mobile${pageDetails.preview2}.jpg 1x, /mobile${pageDetails.preview2}@2x.jpg 2x`}
             />
             <source
               media='(max-width: 867px)'
-              srcSet={`/tablet${pageDetails.preview2}`}
+              srcSet={`/tablet${pageDetails.preview2}.jpg 1x, /tablet${pageDetails.preview2}@2x.jpg 2x`}
             />
             <source
               media='(min-width: 868px)'
-              srcSet={`${pageDetails.preview2}`}
+              srcSet={`${pageDetails.preview2}.jpg 1x, ${pageDetails.preview2}@2x.jpg 2x`}
             />
-            <img src={`${pageDetails.preview2}`} alt='hero image' />
+            <img src={`${pageDetails.preview2}.jpg`} alt='hero image' />
           </picture>
         </div>
       </main>

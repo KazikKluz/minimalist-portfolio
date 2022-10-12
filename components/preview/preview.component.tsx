@@ -39,10 +39,20 @@ const Preview = ({
       {!rightImage && (
         <div className={styles.image_container}>
           <picture className={styles.image}>
-            <source media='(max-width: 475px)' srcSet={`/mobile${imageUrl}`} />
-            <source media='(max-width: 867px)' srcSet={`/tablet${imageUrl}`} />
-            <source media='(min-width: 868px)' srcSet={`${imageUrl}`} />
-            <img src={`${imageUrl}`} alt='hero image' />
+            <source
+              media='(max-width: 475px)'
+              srcSet={`/mobile${imageUrl}.jpg 1x, /mobile${imageUrl}@2x.jpg 2x`}
+            />
+            <source
+              media='(max-width: 867px)'
+              srcSet={`/tablet${imageUrl}.jpg 1x, /tablet${imageUrl}@2x.jpg 2x`}
+            />
+            <source
+              media='(min-width: 868px)'
+              srcSet={`${imageUrl}.jpg 1x, ${imageUrl}@2x.jpg 2x`}
+            />
+
+            <img src={`${imageUrl}.jpg`} alt='hero image' />
           </picture>
         </div>
       )}
@@ -56,10 +66,20 @@ const Preview = ({
       {rightImage && (
         <div className={styles.image_container}>
           <picture className={styles.image}>
-            <source media='(max-width: 475px)' srcSet={`/mobile${imageUrl}`} />
-            <source media='(max-width: 867px)' srcSet={`/tablet${imageUrl}`} />
-            <source media='(min-width: 868px)' srcSet={`${imageUrl}`} />
-            <img src={`${imageUrl}`} alt='hero image' />
+            <source
+              media='(max-width: 475px)'
+              srcSet={`/mobile${imageUrl}.jpg 1x, /mobile${imageUrl}@2x.jpg 2x`}
+            />
+            <source
+              media='(max-width: 867px)'
+              srcSet={`/tablet${imageUrl}.jpg 1x, /tablet${imageUrl}@2x.jpg 2x`}
+            />
+
+            <source
+              media='(min-width: 868px)'
+              srcSet={`${imageUrl}.jpg 1x, ${imageUrl}@2x.jpg 2x`}
+            />
+            <img src={`${imageUrl}.jpg`} alt='hero image' />
           </picture>
         </div>
       )}

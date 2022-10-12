@@ -12,14 +12,18 @@ const Hero = () => {
     <div className={styles.hero}>
       <picture className={styles.image}>
         <source
+          media='(max-width: 475px)'
+          srcSet='/mobile/image-homepage-hero.jpg 1x, /mobile/image-homepage-hero@2x.jpg 2x'
+        />
+        <source
           media='(max-width: 867px)'
-          srcSet='/tablet/image-homepage-hero@2x.jpg'
+          srcSet='/tablet/image-homepage-hero.jpg 1x, /tablet/image-homepage-hero@2x.jpg 2x'
         />
         <source
           media='(min-width: 868px)'
-          srcSet='/image-homepage-hero@2x.jpg'
+          srcSet='/image-homepage-hero.jpg 1x, /image-homepage-hero@2x.jpg 2x'
         />
-        <img src='/image-homepage-hero@2x.jpg' alt='hero image' />
+        <img src='/image-homepage-hero.jpg' alt='hero image' />
       </picture>
 
       <div className={styles.greeting}>

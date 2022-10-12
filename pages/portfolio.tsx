@@ -12,6 +12,7 @@ const Portfolio: NextPageWithLayout = () => {
     <div className={styles.portfolio}>
       {portfolioData.map((item, idx) => (
         <Preview
+          isOnHomepage={false}
           key={idx}
           idx={idx}
           rightImage={item.rightImage}
