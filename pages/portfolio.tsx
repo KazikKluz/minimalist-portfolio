@@ -5,7 +5,7 @@ import Preview from '../components/preview/preview.component';
 
 import styles from './portfolio.module.scss';
 
-import { portfolioData } from './portfolioData';
+import { portfolioData } from '../data/portfolioData';
 
 const Portfolio: NextPageWithLayout = () => {
   return (

@@ -7,7 +7,7 @@ import Layout from '../../components/layout/layout.component';
 import ButtonSecondary from '../../components/button-secondary/button-secondary.component';
 import Paginator from '../../components/paginator/paginator.component';
 
-import { pages } from './pagesData';
+import { pages } from '../../data/pagesData';
 
 import styles from './detail.module.scss';
 import { GetStaticProps } from 'next';
