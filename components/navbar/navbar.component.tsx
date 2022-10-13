@@ -17,7 +17,7 @@ const Navbar = () => {
       <Link href='/'>
         <a>
           <svg className={styles.logo}>
-            <use xlinkHref='/sprite.svg#logo'></use>
+            <use xlinkHref='/minimalist-portfolio/sprite.svg#logo'></use>
           </svg>
         </a>
       </Link>

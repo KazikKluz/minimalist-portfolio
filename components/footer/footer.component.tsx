@@ -9,7 +9,7 @@ const Footer = () => {
       <Link href='/'>
         <a className={styles.logo_link}>
           <svg className={styles.logo}>
-            <use xlinkHref='sprite.svg#logo'></use>
+            <use xlinkHref='/minimalist-portfolio/sprite.svg#logo'></use>
           </svg>
         </a>
       </Link>
@@ -35,21 +35,21 @@ const Footer = () => {
         <Link href='#'>
           <a>
             <svg className={styles.icon}>
-              <use xlinkHref='sprite.svg#github'></use>
+              <use xlinkHref='/minimalist-portfolio/sprite.svg#github'></use>
             </svg>
           </a>
         </Link>
         <Link href='#'>
           <a>
             <svg className={styles.icon}>
-              <use xlinkHref='sprite.svg#twitter'></use>
+              <use xlinkHref='/minimalist-portfolio/sprite.svg#twitter'></use>
             </svg>
           </a>
         </Link>
         <Link href='#'>
           <a>
             <svg className={styles.icon}>
-              <use xlinkHref='sprite.svg#linkedin'></use>
+              <use xlinkHref='/minimalist-portfolio/sprite.svg#linkedin'></use>
             </svg>
           </a>
         </Link>
