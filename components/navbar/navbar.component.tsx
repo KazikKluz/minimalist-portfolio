@@ -56,7 +56,11 @@ const Navbar = () => {
       <div onClick={handleClick} className={styles.hamburger}>
         <svg className={styles.hamburger_icon}>
           <use
-            xlinkHref={visible ? 'sprite.svg#close' : 'sprite.svg#hamburger'}
+            xlinkHref={
+              visible
+                ? '/minimalist-portfolio/sprite.svg#close'
+                : '/minimalist-portfolio/sprite.svg#hamburger'
+            }
           ></use>
         </svg>
       </div>
