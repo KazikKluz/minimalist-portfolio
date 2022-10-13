@@ -22,17 +22,20 @@ const Detail: NextPageWithLayout = ({
         <picture className={styles.image}>
           <source
             media='(max-width: 475px)'
-            srcSet={`/mobile${pageDetails.hero}.jpg 1x, /mobile${pageDetails.hero}@2x.jpg 2x`}
+            srcSet={`/minimalist-portfolio/mobile${pageDetails.hero}.jpg 1x, /minimalist-portfolio/mobile${pageDetails.hero}@2x.jpg 2x`}
           />
           <source
             media='(max-width: 867px)'
-            srcSet={`/tablet${pageDetails.hero}.jpg 1x, /tablet${pageDetails.hero}@2x.jpg 2x`}
+            srcSet={`/minimalist-portfolio/tablet${pageDetails.hero}.jpg 1x, /minimalist-portfolio/tablet${pageDetails.hero}@2x.jpg 2x`}
           />
           <source
             media='(min-width: 868px)'
-            srcSet={`${pageDetails.hero}.jpg 1x, ${pageDetails.hero}@2x.jpg 2x`}
+            srcSet={`/minimalist-portfolio${pageDetails.hero}.jpg 1x, /minimalist-portfolio${pageDetails.hero}@2x.jpg 2x`}
           />
-          <img src={`${pageDetails.hero}.jpg`} alt='hero image' />
+          <img
+            src={`/minimalist-portfolio${pageDetails.hero}.jpg`}
+            alt='hero image'
+          />
         </picture>
       </div>
       <main>
@@ -51,33 +54,39 @@ const Detail: NextPageWithLayout = ({
             <picture className={styles.image}>
               <source
                 media='(max-width: 475px)'
-                srcSet={`/mobile${pageDetails.preview1}.jpg 1x, /mobile${pageDetails.preview1}@2x.jpg 2x`}
+                srcSet={`/minimalist-portfolio/mobile${pageDetails.preview1}.jpg 1x, /minimalist-portfolio/mobile${pageDetails.preview1}@2x.jpg 2x`}
               />
               <source
                 media='(max-width: 867px)'
-                srcSet={`/tablet${pageDetails.preview1}.jpg 1x, /tablet${pageDetails.preview1}@2x.jpg 2x`}
+                srcSet={`/minimalist-portfolio/tablet${pageDetails.preview1}.jpg 1x, /minimalist-portfolio/tablet${pageDetails.preview1}@2x.jpg 2x`}
               />
               <source
                 media='(min-width: 868px)'
-                srcSet={`${pageDetails.preview1}.jpg 1x, ${pageDetails.preview1}@2x.jpg 2x`}
+                srcSet={`/minimalist-portfolio${pageDetails.preview1}.jpg 1x, /minimalist-portfolio${pageDetails.preview1}@2x.jpg 2x`}
               />
-              <img src={`${pageDetails.preview1}.jpg`} alt='hero image' />
+              <img
+                src={`/minimalist-portfolio${pageDetails.preview1}.jpg`}
+                alt='hero image'
+              />
             </picture>
           </div>
           <picture className={styles.image}>
             <source
               media='(max-width: 475px)'
-              srcSet={`/mobile${pageDetails.preview2}.jpg 1x, /mobile${pageDetails.preview2}@2x.jpg 2x`}
+              srcSet={`/minimalist-portfolio/mobile${pageDetails.preview2}.jpg 1x, /minimalist-portfolio/mobile${pageDetails.preview2}@2x.jpg 2x`}
             />
             <source
               media='(max-width: 867px)'
-              srcSet={`/tablet${pageDetails.preview2}.jpg 1x, /tablet${pageDetails.preview2}@2x.jpg 2x`}
+              srcSet={`/minimalist-portfolio/tablet${pageDetails.preview2}.jpg 1x, /minimalist-portfolio/tablet${pageDetails.preview2}@2x.jpg 2x`}
             />
             <source
               media='(min-width: 868px)'
-              srcSet={`${pageDetails.preview2}.jpg 1x, ${pageDetails.preview2}@2x.jpg 2x`}
+              srcSet={`/minimalist-portfolio${pageDetails.preview2}.jpg 1x, /minimalist-portfolio${pageDetails.preview2}@2x.jpg 2x`}
             />
-            <img src={`${pageDetails.preview2}.jpg`} alt='hero image' />
+            <img
+              src={`/minimalist-portfolio${pageDetails.preview2}.jpg`}
+              alt='hero image'
+            />
           </picture>
         </div>
       </main>

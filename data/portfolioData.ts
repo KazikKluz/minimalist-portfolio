@@ -1,7 +1,7 @@
 export const portfolioData = [
   {
     rightImage: false,
-    imageUrl: '/minimalist-portfolio/image-portfolio-manage',
+    imageUrl: '/image-portfolio-manage',
     title: 'Manage',
     buttonTitle: 'view project',
     description:
@@ -11,7 +11,7 @@ export const portfolioData = [
   },
   {
     rightImage: true,
-    imageUrl: '/minimalist-portfolio/image-portfolio-bookmark',
+    imageUrl: '/image-portfolio-bookmark',
     title: 'Bookmark',
     buttonTitle: 'view project',
     description:
@@ -21,7 +21,7 @@ export const portfolioData = [
   },
   {
     rightImage: false,
-    imageUrl: '/minimalist-portfolio/image-portfolio-insure',
+    imageUrl: '/image-portfolio-insure',
     title: 'Insure',
     buttonTitle: 'view project',
     description:
@@ -31,7 +31,7 @@ export const portfolioData = [
   },
   {
     rightImage: true,
-    imageUrl: '/minimalist-portfolio/image-portfolio-fylo',
+    imageUrl: '/image-portfolio-fylo',
     title: 'Fylo',
     buttonTitle: 'view project',
     description:
