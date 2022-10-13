@@ -50,9 +50,8 @@
   }
 
   @media screen and (max-width: 475px) {
-    width: 31.1rem;
+    width: auto;
   }
-  //filter: contrast(123%) saturate(108%) brightness(83%);
 }
 
 .homepage {
@@ -97,7 +96,7 @@
 
   @media screen and (max-width: 475px) {
     padding: 2.5rem 0;
-    width: 31.1rem;
+    width: auto;
     height: 36.8rem;
     margin: 0;
   }
