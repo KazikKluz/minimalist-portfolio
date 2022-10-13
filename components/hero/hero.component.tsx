@@ -13,17 +13,20 @@ const Hero = () => {
       <picture className={styles.image}>
         <source
           media='(max-width: 475px)'
-          srcSet='/mobile/image-homepage-hero.jpg 1x, /mobile/image-homepage-hero@2x.jpg 2x'
+          srcSet='/minimalist-portfolio/mobile/image-homepage-hero.jpg 1x, /minimalist-portfolio/mobile/image-homepage-hero@2x.jpg 2x'
         />
         <source
           media='(max-width: 867px)'
-          srcSet='/tablet/image-homepage-hero.jpg 1x, /tablet/image-homepage-hero@2x.jpg 2x'
+          srcSet='/minimalist-portfolio/tablet/image-homepage-hero.jpg 1x, /minimalist-portfolio/tablet/image-homepage-hero@2x.jpg 2x'
         />
         <source
           media='(min-width: 868px)'
-          srcSet='/image-homepage-hero.jpg 1x, /image-homepage-hero@2x.jpg 2x'
+          srcSet='/minimalist-portfolio/image-homepage-hero.jpg 1x, /minimalist-portfolio/image-homepage-hero@2x.jpg 2x'
         />
-        <img src='/image-homepage-hero.jpg' alt='hero image' />
+        <img
+          src='/minimalist-portfolio/image-homepage-hero.jpg'
+          alt='hero image'
+        />
       </picture>
 
       <div className={styles.greeting}>

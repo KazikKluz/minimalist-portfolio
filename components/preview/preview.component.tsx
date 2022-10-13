@@ -40,18 +40,21 @@ const Preview = ({
           <picture className={styles.image}>
             <source
               media='(max-width: 475px)'
-              srcSet={`/mobile${imageUrl}.jpg 1x, /mobile${imageUrl}@2x.jpg 2x`}
+              srcSet={`/minimalist-portfolio/mobile${imageUrl}.jpg 1x, /minimalist-portfolio/mobile${imageUrl}@2x.jpg 2x`}
             />
             <source
               media='(max-width: 867px)'
-              srcSet={`/tablet${imageUrl}.jpg 1x, /tablet${imageUrl}@2x.jpg 2x`}
+              srcSet={`/minimalist-portfolio/tablet${imageUrl}.jpg 1x, /minimalist-portfolio/tablet${imageUrl}@2x.jpg 2x`}
             />
             <source
               media='(min-width: 868px)'
-              srcSet={`${imageUrl}.jpg 1x, ${imageUrl}@2x.jpg 2x`}
+              srcSet={`/minimalist-portfolio${imageUrl}.jpg 1x, /minimalist-portfolio${imageUrl}@2x.jpg 2x`}
             />
 
-            <img src={`${imageUrl}.jpg`} alt='hero image' />
+            <img
+              src={`/minimalist-portfolio${imageUrl}.jpg`}
+              alt='hero image'
+            />
           </picture>
         </div>
       )}
@@ -67,18 +70,21 @@ const Preview = ({
           <picture className={styles.image}>
             <source
               media='(max-width: 475px)'
-              srcSet={`/mobile${imageUrl}.jpg 1x, /mobile${imageUrl}@2x.jpg 2x`}
+              srcSet={`/minimalist-portfolio/mobile${imageUrl}.jpg 1x, /minimalist-portfolio/mobile${imageUrl}@2x.jpg 2x`}
             />
             <source
               media='(max-width: 867px)'
-              srcSet={`/tablet${imageUrl}.jpg 1x, /tablet${imageUrl}@2x.jpg 2x`}
+              srcSet={`/minimalist-portfolio/tablet${imageUrl}.jpg 1x, /minimalist-portfolio/tablet${imageUrl}@2x.jpg 2x`}
             />
 
             <source
               media='(min-width: 868px)'
-              srcSet={`${imageUrl}.jpg 1x, ${imageUrl}@2x.jpg 2x`}
+              srcSet={`/minimalist-portfolio${imageUrl}.jpg 1x, /minimalist-portfolio${imageUrl}@2x.jpg 2x`}
             />
-            <img src={`${imageUrl}.jpg`} alt='hero image' />
+            <img
+              src={`/minimalist-portfolio${imageUrl}.jpg`}
+              alt='hero image'
+            />
           </picture>
         </div>
       )}
