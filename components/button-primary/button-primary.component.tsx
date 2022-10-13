@@ -18,7 +18,7 @@ const ButtonPrimary = React.forwardRef<HTMLAnchorElement, Props>(
       >
         <div className={styles.logo_container}>
           <svg className={styles.logo}>
-            <use xlinkHref='sprite.svg#down-arrows'></use>
+            <use xlinkHref='/minimalist-portfolio/sprite.svg#down-arrows'></use>
           </svg>
         </div>
         <div className={styles.text}>{children}</div>

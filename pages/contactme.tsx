@@ -79,17 +79,17 @@ const ContactMe: NextPageWithLayout = () => {
           <div className={styles.social}>
             <a href='#'>
               <svg className={styles.icon}>
-                <use xlinkHref='sprite.svg#github'></use>
+                <use xlinkHref='/minimalist-portfolio/sprite.svg#github'></use>
               </svg>
             </a>
             <a href='#'>
               <svg className={styles.icon}>
-                <use xlinkHref='sprite.svg#twitter'></use>
+                <use xlinkHref='/minimalist-portfolio/sprite.svg#twitter'></use>
               </svg>
             </a>
             <a href='#'>
               <svg className={styles.icon}>
-                <use xlinkHref='sprite.svg#linkedin'></use>
+                <use xlinkHref='/minimalist-portfolio/sprite.svg#linkedin'></use>
               </svg>
             </a>
           </div>
