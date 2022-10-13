@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://kazikkluz.github.io/github-user-search/](https://kazikkluz.github.io/minimalist-portfolio/)
+- Live Site URL: [https://kazikkluz.github.io/minimalist-portfolio/](https://kazikkluz.github.io/minimalist-portfolio/)
 
 ### Built with
 
